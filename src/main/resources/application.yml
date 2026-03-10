@@ -2,11 +2,11 @@ spring:
   application:
     name: spring-ai-project
   ai:
-    ollama:
-      # base-url: http://localhost:11434 # ollama默认端口
+#    ollama:
+    # base-url: http://localhost:11434 # ollama默认地址
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/
+      api-key: ${API_KEY}
       chat:
         options:
-#          model: llama3.1
-          model: qwen3.5-flash
-      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
-      api-key: sk-5b1119d046d844a0b64c1e109a77c924
+          model: qwen-turbo

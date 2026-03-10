@@ -23,7 +23,7 @@ public class ChatController {
                 .content();
     }
 
-    @GetMapping(value = "/api/chat/stream", produces = "text/html;charset=utf-8")
+    @GetMapping(value = "/api/chat/stream", produces = "text/event-stream;charset=UTF-8")
     public Flux<String> chatStream(@RequestParam String prompt) {
         return chatClient.prompt()
                 .user(prompt)
